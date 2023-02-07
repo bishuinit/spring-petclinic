@@ -17,9 +17,9 @@ pipeline {
       agent any
       steps {
         sh '''./mvnw sonar:sonar \\ 
-  -Dsonar.host.url=http://172.31.89.246:9000/ \\
+  -Dsonar.host.url=http://172.31.89.246:9000/ \\r \\
   -Dsonar.projectKey=SPetclinic \\
-  -Dsonar.login=sqp_23dabed5d80f08f063b1d3f37489493623f635ac'''
+  -Dsonar.login=sqp_7ec0ce85868104bf17c928c50491d2dff69f7694'''
       }
     }
 
