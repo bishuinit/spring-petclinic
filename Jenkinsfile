@@ -14,12 +14,17 @@ pipeline {
     }
 
     stage('Static Analysis') {
-      agent any
+      agent {
+        node {
+          label 'test'
+        }
+
+      }
       steps {
         sh '''./mvnw sonar:sonar \\ 
-  -Dsonar.host.url=http://172.31.89.246:9000/ \\r \\
-  -Dsonar.projectKey=SPetclinic \\
-  -Dsonar.login=sqp_7ec0ce85868104bf17c928c50491d2dff69f7694'''
+  -Dsonar.host.url=http://3.84.141.191:9000/ \\
+  -Dsonar.projectKey=PetClinic \\
+  -Dsonar.login=sqp_e8c2b543521f81e473ccc05ef271051548b5f20e'''
       }
     }
 
