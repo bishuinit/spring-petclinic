@@ -16,10 +16,10 @@ pipeline {
     stage('Static Analysis') {
       agent any
       steps {
-        sh '''./mvnw sonar:sonar \\
+        sh '''./mvnw sonar:sonar \\ 
   -Dsonar.host.url=http://172.31.89.246:9000/ \\
-  -Dsonar.projectKey=PetClinic \\
-  -Dsonar.login=sqp_e8c2b543521f81e473ccc05ef271051548b5f20e'''
+  -Dsonar.projectKey=SPetclinic \\
+  -Dsonar.login=sqp_23dabed5d80f08f063b1d3f37489493623f635ac'''
       }
     }
 
