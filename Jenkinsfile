@@ -14,12 +14,7 @@ pipeline {
     }
 
     stage('Static Analysis') {
-      agent {
-        node {
-          label 'test'
-        }
-
-      }
+      agent any
       steps {
         sh '''./mvnw sonar:sonar \\
   -Dsonar.host.url=http://172.31.89.246:9000/ \\
